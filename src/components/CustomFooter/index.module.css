@@ -1,0 +1,37 @@
+/* .customFooter{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 99999;
+} */
+.customFooter{
+    border-radius: 1em 1em 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    background: white;
+    padding: 1.7em 5%;
+}
+
+.customFooter ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+.customFooter ul > li{
+    padding: 1em;
+}
+
+.customFooter ul > li:hover{
+    text-decoration: underline;
+}
+
+
+.customFooter ul > li:nth-child(1){
+    font-weight: 600;
+    text-decoration: none;
+}

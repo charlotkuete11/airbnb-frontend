@@ -1,0 +1,146 @@
+.footer{
+    padding:.5em 5%;
+    display: flex;
+    justify-content: space-between; 
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:-20px;
+    box-shadow: 0 0 1.3px gray;
+    background-color: white;
+    z-index: 500;
+}
+
+.footer > .firstBlock{
+    width: auto;
+}
+
+.footer > .firstBlock > ul > li{
+    margin-left: .8em;
+    margin-right: .8em;
+    font-weight: 400;
+    position:relative;
+}
+
+.footer > .firstBlock > ul > li:not(:nth-child(1))::before{
+    content: ".";
+    position: absolute;
+    top:-70%;
+    font-size: x-large;
+    left:-.6em;
+}
+
+.footer > .firstBlock > ul > li:nth-child(1){
+    margin-left:0;
+}
+
+.footer > .firstBlock > ul, .secondBlock > ul{
+    margin: 0; 
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer > .firstBlock > ul > li, .secondBlock > ul > li{
+    display: inline-block;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.secondBlock > ul > li .sbImg{
+    vertical-align: middle;
+}
+.secondBlock > ul > li > span{
+    margin-left: .3em;
+    vertical-align: middle;
+}
+.secondBlock > ul > li:hover > span{
+    text-decoration: underline;
+}
+.footer > .firstBlock > ul > li:hover{
+    text-decoration: underline;
+}
+.secondBlock{
+    width:410px;
+}
+
+.secondBlock > ul > li{
+    margin-right: 1.6em;
+    text-align: left;
+    font-weight: 500;
+}
+
+.customFooterContainer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 99999;
+}
+
+.cfElmtContainer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;  
+    animation-name: entering;
+    animation-duration: .6s;
+}
+
+.cfledContainer{
+    width:65em;
+    background:white;
+    margin:auto;
+    height:80%;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: .7em;
+    animation-name: entering;
+    animation-duration: .6s;
+}
+
+.customFooterContainer .cfElmtContainer .close{
+    position:absolute;
+    top:.4em;
+    left: 1em;
+    font-size: 1em;
+    cursor: pointer;
+    padding:.1em .5em .3em .5em;
+    border-radius: 10em;
+    vertical-align: top;
+}
+
+.customFooterContainer .cfledContainer .closeContainer{
+    height:3em;
+    width:100%;
+    position:relative;
+}
+
+.customFooterContainer .cfledContainer .close{
+    position:absolute;
+    cursor:pointer;
+    padding:.2em .5em .5em .5em;
+    font-size: 1.2em;
+    border-radius: 50%;
+    margin-left:1em;
+    top:.5em;
+}
+
+
+.customFooterContainer .close:hover{   
+    background-color: rgba(180, 180, 180, .3);
+}
+
+
+@keyframes entering {
+    from {
+        bottom: -60%;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity:1;
+    }
+  }

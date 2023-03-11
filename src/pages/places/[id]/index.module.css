@@ -1,0 +1,186 @@
+
+
+.main{
+    margin:auto;
+    margin-top:5em;
+    width: 75%;
+    padding:1em 0;
+}
+
+.block1{
+    margin-bottom:1.5em;
+}
+
+.main .block1 .titleBlock{
+    padding:0 0 1.5em 0 ;
+}
+.main .block1 .titleBlock .title{
+    font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.main .block1 .titleBlock .labelBlock{
+    display:flex;
+    justify-content: space-between;
+    padding-top:.5em;
+    color: rgba(50, 50, 50, 1);
+}
+
+.main .block1 .titleBlock .labelBlock ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.main .block1 .titleBlock .labelBlock ul li{
+    display:inline-block;
+    margin-right:.4em;
+    padding:.3em;
+}
+
+.main .block1 .titleBlock .labelBlock ul li:nth-child(2){
+    margin-left:.4em;
+    text-decoration: underline;
+    padding: 0 .2em;
+    cursor: pointer;
+    position: relative;
+}
+
+.main .block1 .titleBlock .labelBlock ul li:nth-child(2)::before{
+    content: ".";
+    position:absolute;
+    left: -.7em;
+    top: -4px;
+}
+
+.main .block1 .titleBlock .labelBlock .icon, .main .block1 .titleBlock .labelBlock span, .container .imgModal .header .icon, .container .imgModal .header span{
+    margin-right: .3em;
+}
+
+
+.container .styleSpan{
+    cursor: pointer;
+    padding:.3em;
+    border-radius:.6em;
+    text-decoration: underline;
+}
+
+.container .styleSpan:hover{
+    box-shadow: 0 0 .2em rgba(180, 180, 180,1);
+}
+
+.main .block1 .imgBlock{
+    position:relative;
+}
+
+.main .block1 .imgs .img:nth-child(1){
+    grid-area: one;
+}
+
+.main .block1 .imgs .img:nth-child(2){
+    grid-area: two;
+}
+
+.main .block1 .imgs .img:nth-child(3){
+    grid-area: three;
+}
+
+.main .block1 .imgs .img:nth-child(4){
+    grid-area: four;
+}
+
+.main .block1 .imgs .img:nth-child(5){
+    grid-area: five;
+}
+
+.main .block1 .imgs .img{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    cursor: pointer;
+}
+
+.main .block1 .imgs {
+    display: grid;
+    grid-template: 
+        'one two four' 50%
+        'one three five' 50% / 2fr 1fr 1fr;
+    grid-gap: 10px;
+    border-radius:1em;
+    overflow: hidden;
+}
+
+.main .block1 .imgBlock .showAll{
+    position:absolute;
+    right: 2em;
+    bottom:2em;
+    border: 1px solid rgb(100, 100, 100);
+    padding: .4em;
+    border-radius:.6em;
+    font-weight: 540;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.main .block1 .imgBlock .showAll span{
+    margin-left:.3em;
+}
+
+.container .imgModal{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    background: white;
+    z-index: 90000;
+    overflow-y: auto;
+    animation-name: entering;
+    animation-duration: 1s;
+}
+
+.container .imgModal .header{
+    padding:1.5em;
+    display:flex;
+    justify-content:space-between;
+}
+
+.container .imgModal .header .chevron .img{
+    cursor:pointer;
+    width: 1.5em !important;
+    height: 1.5em !important;
+    border-radius: 50%;
+}
+
+.container .imgModal .header .chevron .img:hover{
+    box-shadow: 0 0 .2em gray;
+}
+
+.container .imgModal .container{
+    width:75%;
+    margin:1em auto;
+    height:35em;
+}
+
+.container .imgModal .container .swiper{
+    height:100%;
+}
+.container .imgModal .container .swiper .image{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    cursor: pointer;
+}
+@keyframes entering {
+    from {
+        top: 80%;
+        opacity:0;
+    }
+    to {
+        top: 0;
+        opacity:1;
+    }
+}

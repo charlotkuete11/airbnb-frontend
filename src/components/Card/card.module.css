@@ -1,0 +1,50 @@
+.card{
+    
+}
+
+.card .carousel .slideImgContainer{
+    width:100%;
+}
+
+.card .carousel .slideImg{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    border-radius: .7em;
+}
+
+.card .content{
+    font-size: .9rem;
+    margin-top:3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .title{
+    font-weight: bold;
+    margin: 2px;
+    font-style: italic;
+    display:inline-block;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card .city, .card .prix{
+    margin:4px;
+    color: rgba(80, 80, 80, .9);
+}
+
+.card.content .metadata{
+    width: 75%;
+}
+
+.card .content .rate{
+    width:24%;
+    text-align: right;
+}
+
+.content p{
+    margin-bottom: 10px;
+}
